@@ -16,7 +16,7 @@ public class BeanController {
     private Coach cricketCoach2;
 
     @Autowired
-    public BeanController(@Qualifier("cricketCoach") Coach cricketCoach1,
+    public BeanController(@Qualifier("swimCoach") Coach cricketCoach1,
                           @Qualifier("cricketCoach") Coach cricketCoach2){
         this.cricketCoach1 = cricketCoach1;
         this.cricketCoach2 = cricketCoach2;
@@ -25,6 +25,10 @@ public class BeanController {
     @GetMapping("/check")
     public boolean compare(){
         return this.cricketCoach1 == this.cricketCoach2;
+    }
+    @GetMapping("/workout")
+    public String getWorkout(){
+        return this.cricketCoach1.getDailyWorkout();
     }
 
 }

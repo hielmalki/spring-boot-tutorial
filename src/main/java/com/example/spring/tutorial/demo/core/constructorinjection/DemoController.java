@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 
-    private Coach myCoach;
+    private MyCoach myCoach;
 
     // Constructor Injection
     /*@Autowired
@@ -18,8 +18,8 @@ public class DemoController {
 
     // setter injection
     @Autowired
-    public void setMyCoach(Coach theCoach){
-        this.myCoach = theCoach;
+    public void setMyCoach(MyCoach myCoach){
+        this.myCoach = myCoach;
     }
 
     @GetMapping("/dailyworkout")

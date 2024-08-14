@@ -1,6 +1,6 @@
 package com.example.spring.tutorial.demo.core.constructorinjection;
 
-public interface Coach {
+public interface MyCoach {
 
     String getDailyWorkout();
 }
